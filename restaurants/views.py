@@ -58,7 +58,8 @@ def restaurant_list(request):
             ).distinct()
 
     context = {
-        "restaurants": restaurants
+        "restaurants": restaurants,
+        "q": query
     }
     return render(request, 'list.html', context)
 
